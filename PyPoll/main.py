@@ -59,10 +59,10 @@ output_path = os.path.join("..", "PyPoll", "output_2.csv")
 with open(output_path, 'w', newline='') as csvfile:
     csvwriter = csv.writer(csvfile, delimiter=',')
     #write the lines in the new file
-    csvwriter.writerow(['Election Results'])
-    csvwriter.writerow(['Total Votes:', totalVotes])
+    csvwriter.writerow(['Election Results', "", ""])
+    csvwriter.writerow(['Total Votes:', totalVotes, ""])
     zz = len(candidates)
     while zz > 0:
         csvwriter.writerow([candidates[zz-1], ((voteCount[zz-1]/totalVotes)*100), voteCount[zz-1]])
         zz -= 1
-    csvwriter.writerow(['Winner:', trueWinner])    
+    csvwriter.writerow(['Winner:', trueWinner, ""])    
