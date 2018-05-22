@@ -85,10 +85,10 @@ output_path = os.path.join("..", "PyBank", "output_2.csv")
 with open(output_path, 'w', newline='') as csvfile:
     csvwriter = csv.writer(csvfile, delimiter=',')
     #write the lines in the new file
-    csvwriter.writerow(['Financial Analysis'])
-    csvwriter.writerow(['Total Months:', months])
-    csvwriter.writerow(['Total Revenue: ', totalRev])
-    csvwriter.writerow(['Average Revenus Change: ', avgRevCh])
+    csvwriter.writerow(['Financial Analysis',"",""])
+    csvwriter.writerow(['Total Months:', months,""])
+    csvwriter.writerow(['Total Revenue: ', totalRev.""])
+    csvwriter.writerow(['Average Revenus Change: ', avgRevCh,""])
     csvwriter.writerow(['Greatest Increase in Revenue:', greatMonth, greatRev])
     csvwriter.writerow(['Greatest Decrease in Revenue: ', worstMonth, revDec])
 
