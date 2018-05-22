@@ -36,7 +36,9 @@ with open(csvpath, newline='') as csvfile:
             x -= 1         
 
 
-    #find out which postion has the most votes, figure out where that position is, assign that to a variable, then match it up to the correct candidate
+    #find out which postion has the most votes, 
+    #figure out where that position is, assign that to a variable, 
+    #then match it up to the correct candidate
     winner = (max(voteCount))
     win = voteCount.index(winner)
     trueWinner = candidates[win]
