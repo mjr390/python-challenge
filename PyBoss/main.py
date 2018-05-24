@@ -10,8 +10,8 @@ splitNames = []
 firstNames = []
 lastNames = []
 DOB = []
-secretSSN = []
 SSNall = []
+ID = []
 
 #open the file reading each line as a new line in csv format
 with open(csvpath, newline='') as csvfile:
@@ -31,10 +31,14 @@ with open(csvpath, newline='') as csvfile:
         secretSSN[4:6] = "**"
         secretSSNstr = ''.join(secretSSN)
         SSNall.append(secretSSNstr)
+        ID.append(row[0])
+
+
 
 
 
 #print(lastNames)
 #print(DOB)
-print(SSNall)
+#print(SSNall)
+#print(ID)
 
