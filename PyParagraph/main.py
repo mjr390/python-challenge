@@ -4,7 +4,7 @@ import re
 
 
 
-filepath = open("../PyParagraph/paragraph_1.txt", "r")
+filepath = open("../PyParagraph/paragraph_2.txt", "r")
 
 x = filepath.read()
 
@@ -33,3 +33,14 @@ print("Approximate Word Count: " + str(wordCount))
 print("Approximate Sentence Count: " + str(sentenceCount))
 print("Average Letter Count: " + str(avgLetterCount))
 print("Average Sentence Length: " + str(avgSentenceLength))      
+
+
+output_path = os.path.join("..", "PyParagraph", "output_2.csv")
+with open(output_path, 'w', newline='') as csvfile:
+    csvwriter = csv.writer(csvfile, delimiter=',')
+
+    csvwriter.writerow(["Paragraph Analysis", ""])
+    csvwriter.writerow(["Approximate Word Count: ", str(wordCount)])
+    csvwriter.writerow(["Approximate Sentence Count: ", str(sentenceCount)])
+    csvwriter.writerow(["Average Letter Count: ", str(avgLetterCount)])
+    csvwriter.writerow(["Average Sentence Length: ", str(avgSentenceLength)])
