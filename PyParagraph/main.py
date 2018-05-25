@@ -9,13 +9,13 @@ filepath = open("../PyParagraph/paragraph_1.txt", "r")
 x = filepath.read()
 
 wordCount = len(x.split())
-print(wordCount)
+#print(wordCount)
 
 sentenceCount = len(x.split('.'))
-print(sentenceCount)
+#print(sentenceCount)
 
 avgSentenceLength = wordCount/sentenceCount
-print(avgSentenceLength)
+#print(avgSentenceLength)
 
 # print(totalcom)
 letterCount = 0
@@ -25,4 +25,11 @@ for char in x:
         letterCount += 1
 #print(letterCount)
 avgLetterCount = letterCount/wordCount
-print(avgLetterCount)        
+#print(avgLetterCount)  
+
+print("Paragraph Analysis")
+print("-"*30)
+print("Approximate Word Count: " + str(wordCount))
+print("Approximate Sentence Count: " + str(sentenceCount))
+print("Average Letter Count: " + str(avgLetterCount))
+print("Average Sentence Length: " + str(avgSentenceLength))      
